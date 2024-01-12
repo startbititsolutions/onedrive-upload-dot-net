@@ -1,6 +1,6 @@
 ﻿using Azure.Identity;
 using Microsoft.Graph;
-namespace OneDriveNuget
+namespace onedrive_upload_dot_net
 {
     public class OneDriveConnect :IOneDriveConnect
     {
