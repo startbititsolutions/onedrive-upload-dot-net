@@ -136,3 +136,46 @@ var url = await connect.getUploadFileUrl(@"E:\\test.txt",_configuration["GraphSe
         }
     }
 ```
+
+# Create an Microsoft Entra App - Step-by-Step Guide
+
+## Step 1: Microsoft Entra Portal
+
+- Log in to the [Microsoft Entra Portal](https://entra.microsoft.com/) with your Microsoft account.
+
+## Step 2: Navigate to Identity
+
+- In the left-hand menu, click on "Identity."
+
+## Step 3: Register an Application
+
+1. Inside Identity, click on "App registrations."
+2. Click on "New registration."
+3. Fill in the required details:
+   - **Name:** Give your app a name.
+   - **Supported account types:** Choose the appropriate option based on your requirements.
+4. Click "Register."
+   ![App Registraion](/onedrive-upload-dot-net/Screenshot/Appregistraion.jpg)
+
+## Step 4: Note Application (Client) ID and Directory (Tenant) ID
+
+- After registration, note down the "Application (client) ID" and "Directory (tenant) ID" from the app overview page.
+  ![App overview](/onedrive-upload-dot-net/Screenshot/App%20overview.jpg)
+
+## Step 5: Create a Client Secret
+
+1. In the left-hand menu, go to `Certificates & secrets`.
+2. Under `Client secrets`, create a new `client secret`. Note down the secret value.
+   ![ClientSecret](/onedrive-upload-dot-net/Screenshot/ClientSecret.png)
+
+## Step 6: Configure API Permissions
+
+1. In the left-hand menu, go to `API permissions`.
+2. Click on `Add a permission`, choose the API your app needs access to, and select the required permissions.
+3. Click "Grant admin consent for [your organization]" to consent to the permissions.
+   ![Apipermission](/onedrive-upload-dot-net/Screenshot/Api%20permission.png)
+
+## Step 7:Implementation of Noted Down Keys
+
+1. Now you've got `client ID` , `Directory (tenant) ID` , `client secret`.
+2. Now use these keys and `UserEmail` for uploading in onedrive.
